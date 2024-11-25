@@ -1,21 +1,20 @@
 from pydantic import BaseModel
 from datetime import datetime
-from typing import Optional, Dict
+from typing import Optional
 
 class RankingCreate(BaseModel):
     slug: str
     rank: int
-    true_rank: int
-    sponsored: bool
-    is_open: bool
-    total_restaurants: int
-    total_delivering: int
-    total_open_delivering: int
-    search_metadata: Optional[Dict] = None  # Changed from 'metadata' to 'search_metadata'
+    rank_total: int
+    total_restaurants: int 
+    total_restaurants_delivering: int
+    total_restaurants_delivering_open: bool
+    isSponsored: bool
+    isOpenForOrder: bool
 
 class Ranking(RankingCreate):
     id: int
-    retrieved_at: datetime
+    timestamp: datetime
 
     class Config:
         from_attributes = True

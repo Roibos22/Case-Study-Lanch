@@ -19,11 +19,11 @@ ADDRESSES: List[Dict[str, str]] = [
         "restaurant": "loco-chicken-bielefeld"
     },
     {
-        "address": "50677 köln",  # Südstadt
+        "address": "50677 köln",
         "restaurant": "happy-slice-suedstadt"
     },
     {
-        "address": "22089 hamburg",  # Wandsbek
+        "address": "22089 hamburg",
         "restaurant": "happy-slice-pizza-i-wandsbek-markt"
     }
 ]
@@ -44,7 +44,7 @@ def run_scraper():
                 "address": address,
                 "restaurant": restaurant,
                 "rank": result["rank"],
-                "true_rank": result["true_rank"],
+                "rank_total": result["rank_total"],
                 "total_restaurants": result["total_restaurants"]
             })
             logger.info(f"Successfully processed {restaurant}")
@@ -63,7 +63,7 @@ def run_scraper():
             f"Restaurant: {result['restaurant']:40} "
             f"Address: {result['address']:20} "
             f"Rank: {result['rank']:3} "
-            f"True Rank: {result['true_rank']:3} "
+            f"Rank Total: {result['rank_total']:3} "
             f"Total Restaurants: {result['total_restaurants']}"
         )
 

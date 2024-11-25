@@ -65,8 +65,8 @@ def process_address(address: str, restaurant_slug: str) -> dict:
         logger.error(f"Error processing {restaurant_slug} at {address}: {str(e)}")
         raise
 
-if __name__ == "__main__":
-    # For testing purposes
-    test_address = "50226 frechen"
-    test_slug = "loco-chicken-i-frechen"
-    process_address(test_address, test_slug)
+# if __name__ == "__main__":
+#     # For testing purposes
+#     test_address = "50226 frechen"
+#     test_slug = "loco-chicken-i-frechen"
+#     process_address(test_address, test_slug)
