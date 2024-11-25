@@ -1,0 +1,2114 @@
+{
+  "restaurants": {
+    "3R737O7N": {
+      "id": "3R737O7N",
+      "primarySlug": "mevlana-kebabhaus-unterschneidheim-1",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 4,
+      "brand": {
+        "name": "Mevlana Kebabhaus",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/3R737O7N/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_62",
+        "heroImageUrlType": "STOCK",
+        "branchName": "Unterschneidheim"
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "burgers_541",
+        "doener_821"
+      ],
+      "rating": {
+        "votes": 67,
+        "score": 4.4
+      },
+      "location": {
+        "streetAddress": "Espangasse 7",
+        "city": "Unterschneidheim",
+        "country": "DE",
+        "lat": "48.9414628",
+        "lng": "10.3632645",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "duration": 40,
+          "durationRange": {
+            "min": 30,
+            "max": 55
+          },
+          "deliveryFeeDefault": 300,
+          "minOrderValue": 4000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 300
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "distance": {
+            "unit": "m",
+            "quantity": 8039
+          }
+        }
+      },
+      "paymentMethods": [
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "O053N17N": {
+      "id": "O053N17N",
+      "primarySlug": "pizza-flames",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 57,
+      "brand": {
+        "name": "Pizza Spicy.",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/O053N17N/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_20",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "pasta_1614",
+        "doener_821"
+      ],
+      "rating": {
+        "votes": 464,
+        "score": 4
+      },
+      "location": {
+        "streetAddress": "Friedrich-Ebert-Straße 40",
+        "city": "Schopfloch",
+        "country": "DE",
+        "lat": "49.120045",
+        "lng": "10.305772",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "10:30",
+          "duration": 40,
+          "durationRange": {
+            "min": 30,
+            "max": 55
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 4500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "10:30",
+          "distance": {
+            "unit": "m",
+            "quantity": 17787
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "O1103P7N": {
+      "id": "O1103P7N",
+      "primarySlug": "pizzazentrum-ellwangen",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": true
+      },
+      "priceRange": 0,
+      "popularity": 124,
+      "brand": {
+        "name": "Pizza Zentrum Ellwangen",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/O1103P7N/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_37",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "burgers_541",
+        "pasta_1614",
+        "2600"
+      ],
+      "rating": {
+        "votes": 859,
+        "score": 4.3
+      },
+      "location": {
+        "streetAddress": "Spitalstraße 33",
+        "city": "Ellwangen",
+        "country": "DE",
+        "lat": "48.9612146",
+        "lng": "10.1335691",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": true
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "16:00",
+          "duration": 20,
+          "durationRange": {
+            "min": 20,
+            "max": 30
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 1500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "16:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 9103
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "O1NNQP01": {
+      "id": "O1NNQP01",
+      "primarySlug": "subway-dinkelsbuehl",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 972,
+      "popularity": 9,
+      "brand": {
+        "name": "Subway",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/chains/de/subway/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/671/671_sandwiches_2",
+        "heroImageUrlType": "STOCK",
+        "branchName": "Dinkelsbühl"
+      },
+      "cuisineTypes": [
+        "sandwiches_671",
+        "2600"
+      ],
+      "rating": {
+        "votes": 160,
+        "score": 4
+      },
+      "location": {
+        "streetAddress": "Luitpoldstraße 16",
+        "city": "Dinkelsbühl",
+        "country": "DE",
+        "lat": "49.0675896",
+        "lng": "10.3281495",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": true
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "10:30",
+          "duration": 50,
+          "durationRange": {
+            "min": 40,
+            "max": 65
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 6500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "11:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 12684
+          }
+        }
+      },
+      "paymentMethods": [
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "O1QO55N1": {
+      "id": "O1QO55N1",
+      "primarySlug": "pizzahaus-la-pizza",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 1096,
+      "popularity": 45,
+      "brand": {
+        "name": "Pizzahaus La Pizza",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/O1QO55N1/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_150",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "pasta_1614",
+        "schnitzel_1654",
+        "2600"
+      ],
+      "rating": {
+        "votes": 1266,
+        "score": 4.1
+      },
+      "location": {
+        "streetAddress": "Schmiedstraße 10",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.868034",
+        "lng": "10.105839",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": true
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "duration": 50,
+          "durationRange": {
+            "min": 40,
+            "max": 65
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 5000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "distance": {
+            "unit": "m",
+            "quantity": 15357
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "Q3R530RN": {
+      "id": "Q3R530RN",
+      "primarySlug": "taj-mahal-734799",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 51,
+      "brand": {
+        "name": "Taj Mahal",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/Q3R530RN/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/71/71_indian_64",
+        "heroImageUrlType": "STOCK",
+        "branchName": "Ellwangen"
+      },
+      "cuisineTypes": [
+        "indian_71",
+        "curry_731"
+      ],
+      "rating": {
+        "votes": 251,
+        "score": 4.5
+      },
+      "location": {
+        "streetAddress": "Bahnhofstraße 10",
+        "city": "Ellwangen",
+        "country": "DE",
+        "lat": "48.9640159",
+        "lng": "10.1305942",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "11:00",
+          "duration": 30,
+          "durationRange": {
+            "min": 20,
+            "max": 45
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 1500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "11:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 9318
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "Q50RRQ03": {
+      "id": "Q50RRQ03",
+      "primarySlug": "alis-grill-pizza",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": true,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 36,
+      "brand": {
+        "name": "Ali's Grill Pizza",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/Q50RRQ03/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_108",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "doener_821",
+        "100-halal_921",
+        "2600"
+      ],
+      "rating": {
+        "votes": 11,
+        "score": 4.1
+      },
+      "location": {
+        "streetAddress": "Schmiedstraße 34",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.867664",
+        "lng": "10.102494",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": true,
+        "discounts": true
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "duration": 40,
+          "durationRange": {
+            "min": 30,
+            "max": 55
+          },
+          "deliveryFeeDefault": 500,
+          "minOrderValue": 6000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 500
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "distance": {
+            "unit": "m",
+            "quantity": 15563
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "Q5QNQQ03": {
+      "id": "Q5QNQQ03",
+      "primarySlug": "edo-burger-pizzeria-restaurant",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 0,
+      "brand": {
+        "name": "Edo Burger Pizzeria",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/Q5QNQQ03/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_100",
+        "heroImageUrlType": "STOCK",
+        "branchName": "Restaurant"
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "doener_821",
+        "turkish_31"
+      ],
+      "rating": {
+        "votes": 12,
+        "score": 4.1
+      },
+      "location": {
+        "streetAddress": "Bahnhofstraße 86",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.845203",
+        "lng": "10.095639",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": true,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "duration": 70,
+          "durationRange": {
+            "min": 60,
+            "max": 85
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 6500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "distance": {
+            "unit": "m",
+            "quantity": 17697
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "QN0R75RN": {
+      "id": "QN0R75RN",
+      "primarySlug": "anisa-pizzeria-kebab-haus",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 26,
+      "brand": {
+        "name": "Anisa Pizzeria Kebab Haus",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/QN0R75RN/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_70",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "doener_821",
+        "turkish_31"
+      ],
+      "rating": {
+        "votes": 102,
+        "score": 4.3
+      },
+      "location": {
+        "streetAddress": "Abtsgmünder Straße 9",
+        "city": "Aalen OT Wasseralfingen",
+        "country": "DE",
+        "lat": "48.8674084",
+        "lng": "10.1057165",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": true,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "12:00",
+          "duration": 30,
+          "durationRange": {
+            "min": 20,
+            "max": 45
+          },
+          "deliveryFeeDefault": 700,
+          "minOrderValue": 2000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 700
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "12:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 15411
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "QO5R7ORN": {
+      "id": "QO5R7ORN",
+      "primarySlug": "take-it",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": true,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 0,
+      "brand": {
+        "name": "take it",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/QO5R7ORN/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/2500/header02",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "groceries_2500",
+        "2686",
+        "drinks-and-snacks_661"
+      ],
+      "rating": {
+        "votes": 22,
+        "score": 4.9
+      },
+      "location": {
+        "streetAddress": "Industriestraße 76/1",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.82965",
+        "lng": "10.108568",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": true,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "duration": 25,
+          "durationRange": {
+            "min": 15,
+            "max": 40
+          },
+          "deliveryFeeDefault": 400,
+          "minOrderValue": 3000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 400
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "distance": {
+            "unit": "m",
+            "quantity": 18439
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "QO777ORN": {
+      "id": "QO777ORN",
+      "primarySlug": "smile-aalen",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 88,
+      "brand": {
+        "name": "Smile Aalen",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/QO777ORN/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_138",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "burgers_541",
+        "indian_71"
+      ],
+      "rating": {
+        "votes": 521,
+        "score": 4.1
+      },
+      "location": {
+        "streetAddress": "Bahnhofstraße 45",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.8420868",
+        "lng": "10.094362",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "10:45",
+          "duration": 45,
+          "durationRange": {
+            "min": 35,
+            "max": 60
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 3000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "10:45",
+          "distance": {
+            "unit": "m",
+            "quantity": 18018
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "QPPNRQ03": {
+      "id": "QPPNRQ03",
+      "primarySlug": "burger-aalen-bahnhofstrasse",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 0,
+      "brand": {
+        "name": "Burger Aalen",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/QPPNRQ03/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/541/541_burger_7",
+        "heroImageUrlType": "STOCK",
+        "branchName": "Bahnhofstraße"
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "doener_821",
+        "turkish_31",
+        "2600"
+      ],
+      "rating": {
+        "votes": 23,
+        "score": 3.9
+      },
+      "location": {
+        "streetAddress": "Bahnhofstraße 86",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.845203",
+        "lng": "10.095639",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": true,
+        "discounts": true
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "duration": 35,
+          "durationRange": {
+            "min": 25,
+            "max": 50
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 5000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "distance": {
+            "unit": "m",
+            "quantity": 17697
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "R3NN0503": {
+      "id": "R3NN0503",
+      "primarySlug": "jasmin-restaurant-stlicher-stadtgraben-aalen",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 11,
+      "brand": {
+        "name": "Jasmin Restaurant",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/R3NN0503/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/1246/1246_arab_cuisine_1",
+        "heroImageUrlType": "STOCK",
+        "branchName": "Östlicher Stadtgraben, Aalen"
+      },
+      "cuisineTypes": [
+        "arab_1246",
+        "syrian_2438"
+      ],
+      "rating": {
+        "votes": 27,
+        "score": 3.7
+      },
+      "location": {
+        "streetAddress": "Stuttgarter Straße 6",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.837723",
+        "lng": "10.095107",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": true,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "11:00",
+          "duration": 55,
+          "durationRange": {
+            "min": 45,
+            "max": 70
+          },
+          "deliveryFeeDefault": 399,
+          "minOrderValue": 3500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 399
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "11:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 18348
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "R57N5N03": {
+      "id": "R57N5N03",
+      "primarySlug": "pizza-service-picco-bello-aalen-friedhofstrasse",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 151,
+      "brand": {
+        "name": "Pizza Service Picco Bello Aalen",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/R57N5N03/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_58",
+        "heroImageUrlType": "STOCK",
+        "branchName": "Friedhofstraße"
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "indian_71",
+        "thai_61",
+        "2600"
+      ],
+      "rating": {
+        "votes": 291,
+        "score": 4.2
+      },
+      "location": {
+        "streetAddress": "Friedhofstraße 59",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.8373476",
+        "lng": "10.0831322",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": true
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "10:30",
+          "duration": 35,
+          "durationRange": {
+            "min": 25,
+            "max": 50
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 5500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "10:30",
+          "distance": {
+            "unit": "m",
+            "quantity": 18959
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "R5OR5O03": {
+      "id": "R5OR5O03",
+      "primarySlug": "city-grill-73479",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 68,
+      "brand": {
+        "name": "City Grill",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/R5OR5O03/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_43",
+        "heroImageUrlType": "STOCK",
+        "branchName": "Ellwangen"
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "doener_821",
+        "afghan_2328"
+      ],
+      "rating": {
+        "votes": 92,
+        "score": 4.4
+      },
+      "location": {
+        "streetAddress": "Schmiedstraße 15",
+        "city": "Ellwangen (Jagst)",
+        "country": "DE",
+        "lat": "48.9614681",
+        "lng": "10.1305921",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "11:00",
+          "duration": 30,
+          "durationRange": {
+            "min": 20,
+            "max": 45
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 3500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "11:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 9319
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "R73NQPQN": {
+      "id": "R73NQPQN",
+      "primarySlug": "family-kebab-pizza-house",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 11,
+      "brand": {
+        "name": "Family Kebab & Pizza House",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/R73NQPQN/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/821/821_doner_5",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "doener_821",
+        "turkish_31"
+      ],
+      "rating": {
+        "votes": 246,
+        "score": 4.4
+      },
+      "location": {
+        "streetAddress": "Industriestraße 76/1",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.82965",
+        "lng": "10.108568",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": true,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "11:00",
+          "duration": 25,
+          "durationRange": {
+            "min": 15,
+            "max": 40
+          },
+          "deliveryFeeDefault": 400,
+          "minOrderValue": 4500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 400
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "11:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 18439
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "R73O7N13": {
+      "id": "R73O7N13",
+      "primarySlug": "pizza-da-silvana",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": true,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 4,
+      "brand": {
+        "name": "Pizza Service Da Silvana",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526675/static-takeaway-com/images/restaurants/de/R73O7N13/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526675/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_121",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "pasta_1614",
+        "salads_1456"
+      ],
+      "rating": {
+        "votes": 0,
+        "score": 0
+      },
+      "location": {
+        "streetAddress": "Abt-Rudolf-Straße 67",
+        "city": "Ellwangen (Jagst)",
+        "country": "DE",
+        "lat": "48.96374",
+        "lng": "10.26192",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": true,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "17:00",
+          "duration": 40,
+          "durationRange": {
+            "min": 30,
+            "max": 55
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 2500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "17:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 277
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "RO3RR503": {
+      "id": "RO3RR503",
+      "primarySlug": "poke-poke-bowls",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 0,
+      "brand": {
+        "name": "Poke Poke Bowls",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/RO3RR503/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/1864/1864_asian_25",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "2763"
+      ],
+      "rating": {
+        "votes": 7,
+        "score": 4.3
+      },
+      "location": {
+        "streetAddress": "Ledermarkt 5",
+        "city": "Dinkelsbühl",
+        "country": "DE",
+        "lat": "49.0689354",
+        "lng": "10.3204834",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": true,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "duration": 40,
+          "durationRange": {
+            "min": 30,
+            "max": 55
+          },
+          "deliveryFeeDefault": 250,
+          "minOrderValue": 3000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 250
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "distance": {
+            "unit": "m",
+            "quantity": 12609
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "RP101103": {
+      "id": "RP101103",
+      "primarySlug": "pizza-speedy-hauptstrasse-abtsgmnd",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 72,
+      "brand": {
+        "name": "Pizza Speedy",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/RP101103/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/21/21_italian_62",
+        "heroImageUrlType": "STOCK",
+        "branchName": "Hauptstraße | Abtsgmünd"
+      },
+      "cuisineTypes": [
+        "italian_21",
+        "greek_91",
+        "asian_1864"
+      ],
+      "rating": {
+        "votes": 103,
+        "score": 4.2
+      },
+      "location": {
+        "streetAddress": "Hauptstraße 44",
+        "city": "Abtsgmünd",
+        "country": "DE",
+        "lat": "48.8938989",
+        "lng": "10.0062775",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "15:30",
+          "duration": 45,
+          "durationRange": {
+            "min": 35,
+            "max": 60
+          },
+          "deliveryFeeDefault": 0,
+          "minOrderValue": 3500,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 0
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "15:30",
+          "distance": {
+            "unit": "m",
+            "quantity": 19951
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "RP11QRRN": {
+      "id": "RP11QRRN",
+      "primarySlug": "bopfinger-pizzaservice",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 89,
+      "brand": {
+        "name": "Bopfinger Pizzaservice",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/RP11QRRN/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/271/271_italian_pizza_58",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "burgers_541",
+        "pasta_1614",
+        "2600"
+      ],
+      "rating": {
+        "votes": 330,
+        "score": 5
+      },
+      "location": {
+        "streetAddress": "Härtsfeldstraße 18",
+        "city": "Bopfingen",
+        "country": "DE",
+        "lat": "48.8585926",
+        "lng": "10.3500652",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": true
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "15:00",
+          "duration": 30,
+          "durationRange": {
+            "min": 20,
+            "max": 45
+          },
+          "deliveryFeeDefault": 150,
+          "minOrderValue": 2000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 150
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "15:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 13423
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "RP73OQRN": {
+      "id": "RP73OQRN",
+      "primarySlug": "benizza-napoletanische-art",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 26,
+      "brand": {
+        "name": "Benizza Napoletanische Art",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/RP73OQRN/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/RP73OQRN/headers/header",
+        "heroImageUrlType": "OWN",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "italian-pizza_271",
+        "italian_21"
+      ],
+      "rating": {
+        "votes": 68,
+        "score": 4.5
+      },
+      "location": {
+        "streetAddress": "Heidenheimer Straße 1",
+        "city": "Aalen",
+        "country": "DE",
+        "lat": "48.816276",
+        "lng": "10.1268282",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": true,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "duration": 45,
+          "durationRange": {
+            "min": 35,
+            "max": 60
+          },
+          "deliveryFeeDefault": 500,
+          "minOrderValue": 9000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 500
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": false,
+          "openingTime": null,
+          "distance": {
+            "unit": "m",
+            "quantity": 18946
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    },
+    "RRP1NP03": {
+      "id": "RRP1NP03",
+      "primarySlug": "k2-restaurant",
+      "indicators": {
+        "isDeliveryByScoober": false,
+        "isNew": false,
+        "isTestRestaurant": false,
+        "isGroceryStore": false,
+        "isSponsored": false
+      },
+      "priceRange": 0,
+      "popularity": 5,
+      "brand": {
+        "name": "K2 Restaurant",
+        "logoUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/restaurants/de/RRP1NP03/logo_465x320",
+        "heroImageUrl": "https://res.cloudinary.com/tkwy-prod-eu/image/upload/{parameters}/v1732526676/static-takeaway-com/images/generic/heroes/71/71_indian_62",
+        "heroImageUrlType": "STOCK",
+        "branchName": ""
+      },
+      "cuisineTypes": [
+        "indian_71",
+        "pakistani_1804"
+      ],
+      "rating": {
+        "votes": 11,
+        "score": 4.9
+      },
+      "location": {
+        "streetAddress": "Ellwanger Straße 29",
+        "city": "Bopfingen",
+        "country": "DE",
+        "lat": "48.8653282",
+        "lng": "10.3435967",
+        "timeZone": "Europe/Amsterdam"
+      },
+      "supports": {
+        "delivery": false,
+        "pickup": true,
+        "vouchers": true,
+        "stampCards": false,
+        "discounts": false
+      },
+      "shippingInfo": {
+        "delivery": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "17:00",
+          "duration": 35,
+          "durationRange": {
+            "min": 25,
+            "max": 50
+          },
+          "deliveryFeeDefault": 450,
+          "minOrderValue": 7000,
+          "lowestDeliveryFee": {
+            "from": 0,
+            "fee": 450
+          },
+          "dynamicDeliveryFeeInfo": {
+            "expiryTime": null,
+            "token": null
+          }
+        },
+        "pickup": {
+          "isOpenForOrder": false,
+          "isOpenForPreorder": true,
+          "openingTime": "17:00",
+          "distance": {
+            "unit": "m",
+            "quantity": 12538
+          }
+        }
+      },
+      "paymentMethods": [
+        "cash",
+        "creditcard",
+        "paypal",
+        "sofort",
+        "bitpay"
+      ]
+    }
+  },
+  "notification": {
+    "delivery": "",
+    "pickup": ""
+  },
+  "exceptionalStatus": null,
+  "currency": {
+    "code": "EUR",
+    "denominator": 100
+  },
+  "aggregates": {
+    "cuisines": {
+      "100-halal_921": [
+        "Q50RRQ03"
+      ],
+      "2600": [
+        "O1103P7N",
+        "R57N5N03",
+        "RP11QRRN",
+        "O1NNQP01",
+        "Q50RRQ03",
+        "O1QO55N1",
+        "QPPNRQ03"
+      ],
+      "2686": [
+        "QO5R7ORN"
+      ],
+      "2763": [
+        "RO3RR503"
+      ],
+      "afghan_2328": [
+        "R5OR5O03"
+      ],
+      "arab_1246": [
+        "R3NN0503"
+      ],
+      "asian_1864": [
+        "RP101103"
+      ],
+      "burgers_541": [
+        "O1103P7N",
+        "RP11QRRN",
+        "QO777ORN",
+        "3R737O7N"
+      ],
+      "curry_731": [
+        "Q3R530RN"
+      ],
+      "doener_821": [
+        "R5OR5O03",
+        "O053N17N",
+        "QN0R75RN",
+        "R73NQPQN",
+        "Q50RRQ03",
+        "3R737O7N",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ],
+      "drinks-and-snacks_661": [
+        "QO5R7ORN"
+      ],
+      "greek_91": [
+        "RP101103"
+      ],
+      "groceries_2500": [
+        "QO5R7ORN"
+      ],
+      "indian_71": [
+        "R57N5N03",
+        "QO777ORN",
+        "Q3R530RN",
+        "RRP1NP03"
+      ],
+      "italian-pizza_271": [
+        "R73O7N13",
+        "O1103P7N",
+        "R57N5N03",
+        "RP11QRRN",
+        "QO777ORN",
+        "R5OR5O03",
+        "O053N17N",
+        "QN0R75RN",
+        "R73NQPQN",
+        "Q50RRQ03",
+        "O1QO55N1",
+        "RP73OQRN",
+        "3R737O7N",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ],
+      "italian_21": [
+        "RP101103",
+        "RP73OQRN"
+      ],
+      "pakistani_1804": [
+        "RRP1NP03"
+      ],
+      "pasta_1614": [
+        "R73O7N13",
+        "O1103P7N",
+        "RP11QRRN",
+        "O053N17N",
+        "O1QO55N1"
+      ],
+      "salads_1456": [
+        "R73O7N13"
+      ],
+      "sandwiches_671": [
+        "O1NNQP01"
+      ],
+      "schnitzel_1654": [
+        "O1QO55N1"
+      ],
+      "syrian_2438": [
+        "R3NN0503"
+      ],
+      "thai_61": [
+        "R57N5N03"
+      ],
+      "turkish_31": [
+        "QN0R75RN",
+        "R73NQPQN",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ]
+    },
+    "shipping": {
+      "delivery": [
+        "R73O7N13",
+        "O1103P7N",
+        "R57N5N03",
+        "R5OR5O03",
+        "O053N17N",
+        "O1NNQP01",
+        "Q50RRQ03",
+        "RP73OQRN",
+        "3R737O7N",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ],
+      "pickup": [
+        "R73O7N13",
+        "O1103P7N",
+        "R57N5N03",
+        "RP11QRRN",
+        "QO777ORN",
+        "R5OR5O03",
+        "RP101103",
+        "Q3R530RN",
+        "O053N17N",
+        "QN0R75RN",
+        "RRP1NP03",
+        "R73NQPQN",
+        "O1NNQP01",
+        "R3NN0503",
+        "Q50RRQ03",
+        "O1QO55N1",
+        "RP73OQRN",
+        "QO5R7ORN",
+        "3R737O7N",
+        "RO3RR503",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ]
+    },
+    "paymentMethods": {
+      "bitpay": [
+        "R73O7N13",
+        "O1103P7N",
+        "R57N5N03",
+        "RP11QRRN",
+        "QO777ORN",
+        "R5OR5O03",
+        "RP101103",
+        "Q3R530RN",
+        "O053N17N",
+        "QN0R75RN",
+        "RRP1NP03",
+        "R73NQPQN",
+        "O1NNQP01",
+        "R3NN0503",
+        "Q50RRQ03",
+        "O1QO55N1",
+        "RP73OQRN",
+        "QO5R7ORN",
+        "3R737O7N",
+        "RO3RR503",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ],
+      "cash": [
+        "R73O7N13",
+        "O1103P7N",
+        "R57N5N03",
+        "RP11QRRN",
+        "QO777ORN",
+        "R5OR5O03",
+        "RP101103",
+        "Q3R530RN",
+        "O053N17N",
+        "QN0R75RN",
+        "RRP1NP03",
+        "R73NQPQN",
+        "R3NN0503",
+        "Q50RRQ03",
+        "O1QO55N1",
+        "RP73OQRN",
+        "QO5R7ORN",
+        "RO3RR503",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ],
+      "creditcard": [
+        "R73O7N13",
+        "O1103P7N",
+        "R57N5N03",
+        "RP11QRRN",
+        "QO777ORN",
+        "R5OR5O03",
+        "RP101103",
+        "Q3R530RN",
+        "O053N17N",
+        "QN0R75RN",
+        "RRP1NP03",
+        "R73NQPQN",
+        "O1NNQP01",
+        "R3NN0503",
+        "Q50RRQ03",
+        "O1QO55N1",
+        "RP73OQRN",
+        "QO5R7ORN",
+        "3R737O7N",
+        "RO3RR503",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ],
+      "paypal": [
+        "R73O7N13",
+        "O1103P7N",
+        "R57N5N03",
+        "RP11QRRN",
+        "QO777ORN",
+        "R5OR5O03",
+        "RP101103",
+        "Q3R530RN",
+        "O053N17N",
+        "QN0R75RN",
+        "RRP1NP03",
+        "R73NQPQN",
+        "O1NNQP01",
+        "R3NN0503",
+        "Q50RRQ03",
+        "O1QO55N1",
+        "RP73OQRN",
+        "QO5R7ORN",
+        "3R737O7N",
+        "RO3RR503",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ],
+      "sofort": [
+        "R73O7N13",
+        "O1103P7N",
+        "R57N5N03",
+        "RP11QRRN",
+        "QO777ORN",
+        "R5OR5O03",
+        "RP101103",
+        "Q3R530RN",
+        "O053N17N",
+        "QN0R75RN",
+        "RRP1NP03",
+        "R73NQPQN",
+        "O1NNQP01",
+        "R3NN0503",
+        "Q50RRQ03",
+        "O1QO55N1",
+        "RP73OQRN",
+        "QO5R7ORN",
+        "3R737O7N",
+        "RO3RR503",
+        "Q5QNQQ03",
+        "QPPNRQ03"
+      ]
+    },
+    "topRank": [
+      "R73O7N13",
+      "O1103P7N",
+      "R57N5N03",
+      "RP11QRRN",
+      "QO777ORN",
+      "R5OR5O03",
+      "RP101103",
+      "Q3R530RN",
+      "O053N17N",
+      "QN0R75RN",
+      "RRP1NP03",
+      "R73NQPQN",
+      "O1NNQP01",
+      "R3NN0503",
+      "Q50RRQ03",
+      "O1QO55N1",
+      "RP73OQRN",
+      "QO5R7ORN",
+      "3R737O7N",
+      "RO3RR503",
+      "Q5QNQQ03",
+      "QPPNRQ03"
+    ]
+  }
+}

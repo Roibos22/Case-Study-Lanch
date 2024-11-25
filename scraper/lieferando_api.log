@@ -1,0 +1,9 @@
+2024-11-25 10:19:43,555 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:19:43,556 - INFO - Fetching restaurants for address: Petersburger Straße 42, Berlin
+2024-11-25 10:19:51,792 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Petersburger Straße 42 Berlin_20241125_101951.json
+2024-11-25 10:20:14,756 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:20:14,757 - INFO - Fetching restaurants for address: Petersburger Straße 42, Berlin
+2024-11-25 10:20:22,743 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Petersburger Straße 42 Berlin_20241125_102022.json
+2024-11-25 10:24:31,003 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:24:31,004 - INFO - Fetching restaurants for address: Abt Rudolf Strasse 43, 73479 Ellwangen
+2024-11-25 10:24:36,266 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Abt Rudolf Strasse 43 73479 Ellwangen_20241125_102436.json

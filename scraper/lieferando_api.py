@@ -12,23 +12,40 @@ import uuid
 
 class LieferandoAPI:
     def __init__(self, 
-                 output_dir: str = "output",
                  delay_seconds: float = 1.0,
                  max_retries: int = 3):
-        self.output_dir = Path(output_dir)
+        # Get the scraper directory path (assuming this file is in the scraper package)
+        self.scraper_dir = Path(__file__).parent.resolve()
+        
+        # Setup output directory inside scraper folder
+        self.output_dir = self.scraper_dir / "output"
         self.output_dir.mkdir(exist_ok=True)
+        
         self.delay_seconds = delay_seconds
         self.session_id = str(uuid.uuid4())
 
+        # Setup logging to scraper directory
+        log_file = self.scraper_dir / 'lieferando_api.log'
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('lieferando_api.log'),
+                logging.FileHandler(log_file),
                 logging.StreamHandler()
             ]
         )
         self.logger = logging.getLogger(__name__)
+
+        self.session = requests.Session()
+        retry_strategy = Retry(
+            total=max_retries,
+            backoff_factor=0.5,
+            status_forcelist=[500, 502, 503, 504]
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        self.session.mount("https://", adapter)
+        
+        self.logger.info(f"Initialized LieferandoAPI. Output directory: {self.output_dir}")
 
         self.session = requests.Session()
         retry_strategy = Retry(
@@ -117,18 +134,3 @@ class LieferandoAPI:
         
         self.logger.info(f"Data saved to {filename}")
         return str(filename)
-
-if __name__ == "__main__":
-    try:
-        api = LieferandoAPI(delay_seconds=2.0)  # Added slightly longer delay
-        address = "Petersburger Straße 42, Berlin"
-
-        result = api.get_restaurants_by_address(address)
-        filename = api.save_response(result, address)
-        
-        print(f"Successfully retrieved and saved data for {address}")
-        print(f"Response keys: {result.keys()}")
-        print(f"Data saved to: {filename}")
-
-    except Exception as e:
-        logging.error(f"Error in main: {str(e)}", exc_info=True)
