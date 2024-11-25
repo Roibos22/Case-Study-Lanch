@@ -28,31 +28,26 @@ def store_ranking(ranking_data: dict):
     finally:
         db.close()
 
-def process_address(address: str, restaurant_slug: str) -> dict:
-    """
-    Process a specific address and get restaurant ranking
-    
-    Args:
-        address: The address to search for restaurants
-        restaurant_slug: The specific restaurant to track
-        
-    Returns:
-        dict: The processed ranking data
-    """
-    logger.info(f"Processing {restaurant_slug} at {address}")
+def process_slug(slug: str) -> dict:
+    logger.info(f"Processing restaurant: {slug}")
     
     try:
         # Initialize API with delay
         api = LieferandoAPI(delay_seconds=2.0)
         
-        # Get restaurants data
+        # First get restaurant details and address from slug
+        restaurant_data = api.get_restaurant_by_slug(slug)
+        location = restaurant_data['location']
+        address = f"{location['postalCode']} {location['city']}"
+        
+        # Get all restaurants data for that address
         result = api.get_restaurants_by_address(address)
         filename = api.save_response(result, address)
         logger.info(f"Data saved to: {filename}")
         
         # Parse restaurant data
         parser = RestaurantParser(result)
-        parsed_ranking = parser.parse_restaurant(restaurant_slug)
+        parsed_ranking = parser.parse_restaurant(slug)
         logger.info(f"Parsed ranking data: {parsed_ranking}")
         
         # Store in database
@@ -62,8 +57,9 @@ def process_address(address: str, restaurant_slug: str) -> dict:
         return parsed_ranking
         
     except Exception as e:
-        logger.error(f"Error processing {restaurant_slug} at {address}: {str(e)}")
+        logger.error(f"Error processing {slug}: {str(e)}")
         raise
+
 
 # if __name__ == "__main__":
 #     # For testing purposes

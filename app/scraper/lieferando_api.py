@@ -98,6 +98,18 @@ class LieferandoAPI:
             self.logger.error(f"API request failed: {str(e)}")
             raise
 
+    def get_restaurant_by_slug(self, slug: str) -> Dict:
+        url = f'https://cw-api.takeaway.com/api/v34/restaurant?slug={quote(slug)}'
+        restaurant_data = self._make_request(url)
+        
+        if not restaurant_data.get('location'):
+            raise ValueError(f"No restaurant found for slug: {slug}")
+            
+        location = restaurant_data['location']
+        address = f"{location['postalCode']} {location['city']}"
+        
+        return self.get_restaurants_by_address(address)
+
     def get_restaurants_by_address(self, address: str) -> Dict:
         self.logger.info(f"Fetching restaurants for address: {address}")
         
