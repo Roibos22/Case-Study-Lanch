@@ -1,69 +1,134 @@
-# scraper.py
-
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from datetime import datetime
-import os
+import requests
+from urllib.parse import quote
 import json
+from datetime import datetime
 import time
+import logging
+from typing import Dict, Optional
+from pathlib import Path
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+import uuid
 
-class LieferandoScraper:
-    def __init__(self):
-        # Setup output directories
-        self.output_dir = "data/raw_html"
-        os.makedirs(self.output_dir, exist_ok=True)
-        os.makedirs("data/json", exist_ok=True)
-        
-        # Setup Chrome options
-        self.chrome_options = Options()
-        self.chrome_options.add_argument("--headless")
-        self.chrome_options.add_argument("--no-sandbox")
-        self.chrome_options.add_argument("--disable-dev-shm-usage")
+class LieferandoAPI:
+    def __init__(self, 
+                 output_dir: str = "output",
+                 delay_seconds: float = 1.0,
+                 max_retries: int = 3):
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(exist_ok=True)
+        self.delay_seconds = delay_seconds
+        self.session_id = str(uuid.uuid4())
 
-    def save_page(self, url):
-        """Save HTML and extracted JSON data for given URL"""
-        driver = webdriver.Chrome(options=self.chrome_options)
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            handlers=[
+                logging.FileHandler('lieferando_api.log'),
+                logging.StreamHandler()
+            ]
+        )
+        self.logger = logging.getLogger(__name__)
+
+        self.session = requests.Session()
+        retry_strategy = Retry(
+            total=max_retries,
+            backoff_factor=0.5,
+            status_forcelist=[500, 502, 503, 504]
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        self.session.mount("https://", adapter)
+
+    def _rotate_session_id(self):
+        self.session_id = str(uuid.uuid4())
+        self.logger.info("Rotated to new session ID")
+
+    def _get_headers(self) -> Dict[str, str]:
+        return {
+            'accept': 'application/json, text/plain, */*',
+            'accept-language': 'de',
+            'cache-control': 'no-cache',
+            'origin': 'https://www.lieferando.de',
+            'pragma': 'no-cache',
+            'referer': 'https://www.lieferando.de/',
+            'sec-ch-ua': '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"macOS"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'cross-site',
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+            'x-country-code': 'de',
+            'x-language-code': 'de',
+            'x-requested-with': 'XMLHttpRequest',
+            'x-session-id': self.session_id
+        }
+
+    def _make_request(self, url: str, params: Optional[Dict] = None, retry_count: int = 0) -> Dict:
         try:
-            # Load page and wait for dynamic content
-            driver.get(url)
-            time.sleep(5)  # Basic wait for content to load
-            
-            # Generate timestamp for files
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            
-            # Save complete HTML after JavaScript execution
-            html_filename = f"{self.output_dir}/lieferando_{timestamp}.html"
-            with open(html_filename, 'w', encoding='utf-8') as f:
-                f.write(driver.page_source)
-            print(f"HTML saved to: {html_filename}")
-            
-            # Extract JSON data
-            scripts = driver.execute_script("return document.getElementsByTagName('script')")
-            json_data = None
-            for script in scripts:
-                script_text = driver.execute_script("return arguments[0].textContent", script)
-                if script_text and 'window.__INITIAL_STATE__' in script_text:
-                    json_str = script_text.split('window.__INITIAL_STATE__ = ')[1].split('};')[0] + '}'
-                    json_data = json.loads(json_str)
-                    break
-            
-            if json_data:
-                json_filename = f"data/json/lieferando_{timestamp}.json"
-                with open(json_filename, 'w', encoding='utf-8') as f:
-                    json.dump(json_data, f, indent=2)
-                print(f"JSON data saved to: {json_filename}")
-            
-            return html_filename, json_data
+            time.sleep(self.delay_seconds)
+            response = self.session.get(url, headers=self._get_headers(), params=params)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.HTTPError as e:
+            if response.status_code in [401, 403] and retry_count < 3:
+                self.logger.warning(f"Request failed with {response.status_code}, rotating session ID and retrying...")
+                self._rotate_session_id()
+                return self._make_request(url, params, retry_count + 1)
+            self.logger.error(f"API request failed: {str(e)}")
+            raise
+        except requests.exceptions.RequestException as e:
+            self.logger.error(f"API request failed: {str(e)}")
+            raise
 
-        except Exception as e:
-            print(f"Error saving page: {e}")
-            return None, None
-            
-        finally:
-            driver.quit()
+    def get_restaurants_by_address(self, address: str) -> Dict:
+        self.logger.info(f"Fetching restaurants for address: {address}")
+        
+        geocoder_url = f'https://cw-api.takeaway.com/api/v34/location/geocoder?addressString={quote(address)}'
+        location_data = self._make_request(geocoder_url)
+        
+        if not location_data.get('addresses'):
+            self.logger.error(f"No location data found for address: {address}")
+            raise ValueError(f"No location data found for address: {address}")
+        
+        address_data = location_data['addresses'][0]
+        params = {
+            'deliveryAreaId': address_data['deliveryAreaId'],
+            'postalCode': address_data['postalCode'],
+            'lat': address_data['lat'],
+            'lng': address_data['lng'],
+            'limit': 0,
+            'isAccurate': 'true',
+            'filterShowTestRestaurants': 'false'
+        }
+        
+        restaurants_url = 'https://cw-api.takeaway.com/api/v34/restaurants'
+        result = self._make_request(restaurants_url, params)
+        
+        return result
 
-# Run scraper
+    def save_response(self, data: Dict, address: str) -> str:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        safe_address = "".join(x for x in address if x.isalnum() or x in (' ', '-', '_')).strip()
+        filename = self.output_dir / f"restaurants_{safe_address}_{timestamp}.json"
+        
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        
+        self.logger.info(f"Data saved to {filename}")
+        return str(filename)
+
 if __name__ == "__main__":
-    scraper = LieferandoScraper()
-    test_url = "https://www.lieferando.de/lieferservice/essen/frechen-50226"
-    html_file, json_data = scraper.save_page(test_url)
+    try:
+        api = LieferandoAPI(delay_seconds=2.0)  # Added slightly longer delay
+        address = "Petersburger Straße 42, Berlin"
+
+        result = api.get_restaurants_by_address(address)
+        filename = api.save_response(result, address)
+        
+        print(f"Successfully retrieved and saved data for {address}")
+        print(f"Response keys: {result.keys()}")
+        print(f"Data saved to: {filename}")
+
+    except Exception as e:
+        logging.error(f"Error in main: {str(e)}", exc_info=True)

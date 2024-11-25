@@ -1,0 +1,8 @@
+2024-11-25 09:38:11,605 - INFO - Fetching restaurants for address: Petersburger Straße 42, Berlin
+2024-11-25 09:38:19,124 - INFO - Data saved to output/restaurants_Petersburger Straße 42 Berlin_20241125_093819.json
+2024-11-25 09:47:57,331 - INFO - Initializing session...
+2024-11-25 09:47:57,909 - INFO - Session initialized successfully. Conversation ID: 08584345-5b3f-4f28-91f5-26163c9be0f7
+2024-11-25 09:47:57,909 - INFO - Fetching restaurants for address: Petersburger Straße 42, Berlin
+2024-11-25 09:48:05,343 - INFO - Data saved to output/restaurants_Petersburger Straße 42 Berlin_20241125_094805.json
+2024-11-25 09:57:16,783 - INFO - Fetching restaurants for address: Petersburger Straße 42, Berlin
+2024-11-25 09:57:24,542 - INFO - Data saved to output/restaurants_Petersburger Straße 42 Berlin_20241125_095724.json
