@@ -1,0 +1,42 @@
+2024-11-25 10:19:43,555 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:19:43,556 - INFO - Fetching restaurants for address: Petersburger Straße 42, Berlin
+2024-11-25 10:19:51,792 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Petersburger Straße 42 Berlin_20241125_101951.json
+2024-11-25 10:20:14,756 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:20:14,757 - INFO - Fetching restaurants for address: Petersburger Straße 42, Berlin
+2024-11-25 10:20:22,743 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Petersburger Straße 42 Berlin_20241125_102022.json
+2024-11-25 10:24:31,003 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:24:31,004 - INFO - Fetching restaurants for address: Abt Rudolf Strasse 43, 73479 Ellwangen
+2024-11-25 10:24:36,266 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Abt Rudolf Strasse 43 73479 Ellwangen_20241125_102436.json
+2024-11-25 10:31:36,114 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:31:36,114 - INFO - Fetching restaurants for address: Abt Rudolf Strasse 43, 73479 Ellwangen
+2024-11-25 10:31:40,898 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Abt Rudolf Strasse 43 73479 Ellwangen_20241125_103140.json
+2024-11-25 10:32:32,847 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:32:32,848 - INFO - Fetching restaurants for address: Abt Rudolf Strasse 43, 73479 Ellwangen
+2024-11-25 10:32:37,417 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Abt Rudolf Strasse 43 73479 Ellwangen_20241125_103237.json
+2024-11-25 10:33:00,002 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:33:00,003 - INFO - Fetching restaurants for address: Abt Rudolf Strasse 43, 73479 Ellwangen
+2024-11-25 10:33:04,729 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Abt Rudolf Strasse 43 73479 Ellwangen_20241125_103304.json
+2024-11-25 10:54:55,996 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:54:55,998 - INFO - Fetching restaurants for address: Schönhauser Allee 180, 10119 Berlin
+2024-11-25 10:55:02,980 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_Schönhauser Allee 180 10119 Berlin_20241125_105502.json
+2024-11-25 10:56:15,113 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:56:15,114 - INFO - Fetching restaurants for address: 50226 frechen
+2024-11-25 10:56:19,885 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_50226 frechen_20241125_105619.json
+2024-11-25 10:59:20,853 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 10:59:20,853 - INFO - Fetching restaurants for address: 50226 frechen
+2024-11-25 10:59:25,713 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_50226 frechen_20241125_105925.json
+2024-11-25 11:00:35,687 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 11:00:35,688 - INFO - Fetching restaurants for address: 50226 frechen
+2024-11-25 11:00:40,749 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_50226 frechen_20241125_110040.json
+2024-11-25 11:04:33,510 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 11:04:33,511 - INFO - Fetching restaurants for address: 50226 frechen
+2024-11-25 11:04:38,264 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_50226 frechen_20241125_110438.json
+2024-11-25 11:56:54,422 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 11:56:54,423 - INFO - Fetching restaurants for address: 50226 frechen
+2024-11-25 11:56:59,200 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_50226 frechen_20241125_115659.json
+2024-11-25 12:12:02,022 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 12:12:02,022 - INFO - Fetching restaurants for address: 50226 frechen
+2024-11-25 12:12:06,838 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_50226 frechen_20241125_121206.json
+2024-11-25 12:13:39,525 - INFO - Initialized LieferandoAPI. Output directory: /Users/leon/Desktop/Case-Study-Lanch/scraper/output
+2024-11-25 12:13:39,529 - INFO - Fetching restaurants for address: 50226 frechen
+2024-11-25 12:13:44,382 - INFO - Data saved to /Users/leon/Desktop/Case-Study-Lanch/scraper/output/restaurants_50226 frechen_20241125_121344.json

@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  scraper:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://user:password@db:5432/lieferando_db
+      - PYTHONPATH=/app
+    volumes:
+      - .:/app
+      # Exclude Python cache files and output directory from mount
+      - /app/**/__pycache__
+      - /app/app/scraper/output
+
+  db:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=lieferando_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
