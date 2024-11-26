@@ -31,7 +31,7 @@ class LieferandoScraper:
         results = []
         for slug in slugs:
             try:
-                result = self.process_slug(slug)
+                result = self.process_slug(slug, True)
                 logger.info(f"Processing {slug}")
                 if "error" not in result:
                     results.append({
@@ -52,7 +52,7 @@ class LieferandoScraper:
         
         return results
  
-    def process_slug(self, slug: str) -> dict:
+    def process_slug(self, slug: str, store_in_db: bool) -> dict:
         logger.info(f"Processing restaurant: {slug}")
         
         try:
@@ -69,8 +69,9 @@ class LieferandoScraper:
             logger.info(f"Parsed ranking data: {parsed_ranking}")
             
             # Store in database
-            ranking = store_ranking(parsed_ranking)
-            logger.info(f"Stored ranking with ID: {ranking.id}")
+            if store_in_db
+                ranking = store_ranking(parsed_ranking)
+                logger.info(f"Stored ranking with ID: {ranking.id}")
             
             return parsed_ranking
             

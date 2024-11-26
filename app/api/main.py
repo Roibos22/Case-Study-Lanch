@@ -15,7 +15,7 @@ async def get_rank(restaurant_slug: str):
     """Get the current ranking for a restaurant by its slug."""
     try:
         scraper = LieferandoScraper()
-        result = scraper.process_slug(restaurant_slug)
+        result = scraper.process_slug(restaurant_slug, False)
         
         if "error" in result:
             raise HTTPException(status_code=404, detail=result["error"])
