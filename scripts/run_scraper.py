@@ -2,6 +2,7 @@ import logging
 from app.scraper.lieferando_scraper import LieferandoScraper
 from typing import List
 import time
+from apscheduler.schedulers.blocking import BlockingScheduler
 
 logging.basicConfig(
     level=logging.INFO,
@@ -25,11 +26,9 @@ def run_scraper():
         logger.error(f"Scraper Error: {e}")
 
 def main():
-    while True:
-        logger.info("Start new scraping routine")
-        run_scraper()
-        logger.info("End Scraping Routine")
-        time.sleep(600)
+    scheduler = BlockingScheduler()
+    scheduler.add_job(run_scraper, 'cron', minute='*/1')
+    scheduler.start()
 
 if __name__ == "__main__":
     main()
