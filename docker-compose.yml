@@ -1,19 +1,21 @@
 version: '3.8'
 services:
-  scraper:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile
-    depends_on:
-      - db
-    environment:
-      - DATABASE_URL=postgresql+psycopg2://user:password@db:5432/lieferando_db
-      - PYTHONPATH=/app
-    volumes:
-      - .:/app
-      # Exclude Python cache files and output directory from mount
-      - /app/**/__pycache__
-      - /app/app/scraper/output
+  api:
+      build:
+        context: .
+        dockerfile: docker/Dockerfile
+      ports:
+        - "8080:8080"
+      depends_on:
+        - db
+      environment:
+        - DATABASE_URL=postgresql+psycopg2://user:password@db:5432/lieferando_db
+        - PYTHONPATH=/app
+      volumes:
+        - .:/app
+        - /app/**/__pycache__
+        - /app/app/scraper/output
+      command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
 
   db:
     image: postgres:15-alpine

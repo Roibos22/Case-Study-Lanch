@@ -12,27 +12,16 @@ SLUGS: List[str] = [
         "loco-chicken-i-frechen",
         "loco-chicken-bielefeld",
         "happy-slice-suedstadt",
-         "happy-slice-pizza-i-wandsbek-markt"
+        "happy-slice-pizza-i-wandsbek-markt"
 ]
 
-def run_scraper():
+def main():
     try:
         scraper = LieferandoScraper()
         results = scraper.process_slugs(SLUGS)
-        
-        # Print summary
-        logger.info("\nScraping Results:")
-        for result in results:
-            logger.info(
-                f"Restaurant: {result['slug']:40} "
-                f"Rank: {result['rank']}/{result['rank_total']} "
-                f"Total Restaurants: {result['total_restaurants']}"
-            )
-            
-    except KeyboardInterrupt:
-        logger.info("Scraper stopped by user")
+        logger.info(f"Processed {len(results)} restaurants successfully")
     except Exception as e:
-        logger.error(f"Unexpected error: {e}", exc_info=True)
+        logger.error(f"Scraper Error: {e}")
 
 if __name__ == "__main__":
-    run_scraper()
+    main()
