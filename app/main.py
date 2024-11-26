@@ -1,20 +1,13 @@
 from app.scraper.lieferando_api import LieferandoAPI
 from app.parser.restaurant_parser import RestaurantParser
+from app.database import SessionLocal, Base
+from app.database.repository import RankingRepository
+from app.database.config import db_settings
 import logging
 import time
 from typing import List, Dict
-from app.database import SessionLocal, engine, Base
-from app.database.repository import RankingRepository
-from app.database.schemas import RankingCreate
-
-from app.database.models import Base
-from app.database.config import db_settings
-import logging
-
 from sqlalchemy import create_engine
-from app.database.models import Base
-from app.database.config import db_settings
-import logging
+
 
 def init_db():
     """Initialize database and create tables"""
