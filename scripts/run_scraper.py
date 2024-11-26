@@ -3,12 +3,9 @@ from app.scraper.lieferando_scraper import LieferandoScraper
 from typing import List
 import time
 from apscheduler.schedulers.blocking import BlockingScheduler
+from app.utils.logger import setup_logger
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
+logger = setup_logger("run_scraper")
 
 SLUGS: List[str] = [
         "loco-chicken-i-frechen",

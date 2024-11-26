@@ -1,14 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from app.scraper.lieferando_scraper import LieferandoScraper
 import logging
+from app.utils.logger import setup_logger
 
-logger = logging.getLogger(__name__)
+logger = setup_logger("app")
 
 app = FastAPI(title="Restaurant Ranking API")
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8080)
 
 @app.get("/rank/{restaurant_slug}")
 async def get_rank(restaurant_slug: str):
@@ -40,3 +37,6 @@ async def health_check():
     """Health check endpoint"""
     return {"status": "healthy"}
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8080)

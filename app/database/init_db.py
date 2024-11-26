@@ -1,16 +1,14 @@
 from sqlalchemy import create_engine
-import logging
 from app.database.models import Base
 from app.database.config import db_settings
+from app.utils.logger import setup_logger
 
-logger = logging.getLogger(__name__)
+logger = setup_logger("db")
 
 def init_db():
     default_db_url = db_settings.DATABASE_URL.rsplit('/', 1)[0] + '/postgres'
     engine = create_engine(default_db_url)
-    print(default_db_url)
     db_name = db_settings.DATABASE_URL.rsplit('/', 1)[1]
-    print(db_name)
 
     try:
         with engine.connect() as conn:
