@@ -98,7 +98,7 @@ class LieferandoAPI:
             self.logger.error(f"API request failed: {str(e)}")
             raise
 
-    def get_restaurant_by_slug(self, slug: str) -> Dict:
+    def get_slug_address(self, slug: str) -> Dict:
         url = f'https://cw-api.takeaway.com/api/v34/restaurant?slug={quote(slug)}'
         restaurant_data = self._make_request(url)
         
@@ -106,33 +106,22 @@ class LieferandoAPI:
             raise ValueError(f"No restaurant found for slug: {slug}")
             
         location = restaurant_data['location']
-        address = f"{location['postalCode']} {location['city']}"
-        
-        return self.get_restaurants_by_address(address)
 
-    def get_restaurants_by_address(self, address: str) -> Dict:
-        self.logger.info(f"Fetching restaurants for address: {address}")
-        
-        geocoder_url = f'https://cw-api.takeaway.com/api/v34/location/geocoder?addressString={quote(address)}'
-        location_data = self._make_request(geocoder_url)
-        
-        if not location_data.get('addresses'):
-            self.logger.error(f"No location data found for address: {address}")
-            raise ValueError(f"No location data found for address: {address}")
-        
-        address_data = location_data['addresses'][0]
-        params = {
-            'deliveryAreaId': address_data['deliveryAreaId'],
-            'postalCode': address_data['postalCode'],
-            'lat': address_data['lat'],
-            'lng': address_data['lng'],
+        return {
+            #'deliveryAreaId': address_data['deliveryAreaId'],
+            'postalCode': location['postalCode'],
+            'lat': location['lat'],
+            'lng': location['lng'],
             'limit': 0,
             'isAccurate': 'true',
             'filterShowTestRestaurants': 'false'
         }
-        
+
+    def get_restaurants_by_address(self, address: str) -> Dict:
+        self.logger.info(f"Fetching restaurants for address: {address}")
+    
         restaurants_url = 'https://cw-api.takeaway.com/api/v34/restaurants'
-        result = self._make_request(restaurants_url, params)
+        result = self._make_request(restaurants_url, address)
         
         return result
 

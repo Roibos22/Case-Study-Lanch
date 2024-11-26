@@ -38,17 +38,17 @@ class RestaurantParser:
         try:
             return self.data['aggregates']['topRank'].index(restaurant_id) + 1
         except ValueError:
-            return None
+            return 0
 
 
 
     def _get_rank(self, restaurant_id):
         if restaurant_id not in self.restaurants_delivering_open:
-           return None
+           return 0
         try:
             filtered_list = [r for r in self.data['aggregates']['topRank'] 
                           if r in self.restaurants_delivering_open]
             return filtered_list.index(restaurant_id) + 1
         except ValueError:
-           return None
+           return 0
 

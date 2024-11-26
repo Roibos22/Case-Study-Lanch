@@ -9,7 +9,7 @@ echo "Database is ready!"
 
 echo "Initializing database..."
 python - << EOF
-from main import init_db
+from app.main import init_db
 init_db()
 EOF
 
@@ -17,4 +17,4 @@ echo "Waiting 10 seconds before starting the script..."
 sleep 10
 
 echo "Starting script..."
-python run_scraper.py
+python scripts/run_scraper.py
