@@ -14,7 +14,3 @@ class RankingRepository:
         self.db.commit()
         self.db.refresh(db_ranking)
         return db_ranking
-
-    def bulk_create_rankings(self, rankings: List[dict]) -> None:
-        self.db.bulk_insert_mappings(models.Ranking, rankings)
-        self.db.commit()

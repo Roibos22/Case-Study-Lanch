@@ -1,20 +1,19 @@
 from sqlalchemy import create_engine
 import logging
-import time
 from app.database.models import Base
 from app.database.config import db_settings
 
 logger = logging.getLogger(__name__)
 
 def init_db():
-    """Initialize database with simple retry logic"""
     default_db_url = db_settings.DATABASE_URL.rsplit('/', 1)[0] + '/postgres'
     engine = create_engine(default_db_url)
+    print(default_db_url)
     db_name = db_settings.DATABASE_URL.rsplit('/', 1)[1]
+    print(db_name)
 
     try:
         with engine.connect() as conn:
-            # conn.execute("commit")
             try:
                 conn.execute(f"CREATE DATABASE {db_name}")
                 logger.info(f"Created database {db_name}")

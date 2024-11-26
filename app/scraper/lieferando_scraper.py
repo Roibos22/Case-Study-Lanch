@@ -69,7 +69,7 @@ class LieferandoScraper:
             logger.info(f"Parsed ranking data: {parsed_ranking}")
             
             # Store in database
-            if store_in_db
+            if store_in_db:
                 ranking = store_ranking(parsed_ranking)
                 logger.info(f"Stored ranking with ID: {ranking.id}")
             

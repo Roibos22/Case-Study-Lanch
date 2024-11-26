@@ -3,7 +3,7 @@ from sqlalchemy.sql import func
 from . import Base
 
 class Ranking(Base):
-    __tablename__ = "restaurant_rankings"
+    __tablename__ = "lieferando_rankings"
 
     id = Column(Integer, primary_key=True)
     slug = Column(String, index=True, nullable=False)

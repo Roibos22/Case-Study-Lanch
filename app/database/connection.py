@@ -1,4 +1,3 @@
-# app/database/connection.py
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from app.database.config import db_settings
