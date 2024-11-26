@@ -10,7 +10,7 @@ echo "Database is ready!"
 
 echo "Initializing database..."
 python - << EOF
-from app.main import init_db
+from app.database.init_db import init_db
 init_db()
 EOF
 

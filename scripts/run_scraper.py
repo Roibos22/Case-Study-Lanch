@@ -1,6 +1,7 @@
 import logging
-from app.main import LieferandoScraper
+from app.scraper.lieferando_scraper import LieferandoScraper
 from typing import List
+import time
 
 logging.basicConfig(
     level=logging.INFO,
@@ -15,13 +16,20 @@ SLUGS: List[str] = [
         "happy-slice-pizza-i-wandsbek-markt"
 ]
 
-def main():
+def run_scraper():
     try:
         scraper = LieferandoScraper()
         results = scraper.process_slugs(SLUGS)
         logger.info(f"Processed {len(results)} restaurants successfully")
     except Exception as e:
         logger.error(f"Scraper Error: {e}")
+
+def main():
+    while True:
+        logger.info("Start new scraping routine")
+        run_scraper()
+        logger.info("End Scraping Routine")
+        time.sleep(600)
 
 if __name__ == "__main__":
     main()

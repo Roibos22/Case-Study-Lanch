@@ -15,7 +15,7 @@ COPY . .
 
 ENV PYTHONPATH=/app
 
-COPY docker/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY app/scraper/docker/scraper-entrypoint.sh /scraper-entrypoint.sh
+RUN chmod +x /scraper-entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/scraper-entrypoint.sh"]

@@ -1,4 +1,3 @@
-# app/database/init_db.py
 from sqlalchemy import create_engine
 import logging
 import time
@@ -15,7 +14,7 @@ def init_db():
 
     try:
         with engine.connect() as conn:
-            conn.execute("commit")
+            # conn.execute("commit")
             try:
                 conn.execute(f"CREATE DATABASE {db_name}")
                 logger.info(f"Created database {db_name}")

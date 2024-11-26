@@ -6,6 +6,10 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Restaurant Ranking API")
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8080)
+
 @app.get("/rank/{restaurant_slug}")
 async def get_rank(restaurant_slug: str):
     """Get the current ranking for a restaurant by its slug."""
@@ -35,3 +39,4 @@ async def get_rank(restaurant_slug: str):
 async def health_check():
     """Health check endpoint"""
     return {"status": "healthy"}
+
