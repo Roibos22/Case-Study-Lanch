@@ -12,10 +12,10 @@ class RankingCreate(BaseModel):
     is_active: bool = False 
     rating_votes: Optional[int]
     rating_score: Optional[float]
+    timestamp: datetime
 
 class Ranking(RankingCreate):
     id: int
-    timestamp: datetime
 
     class Config:
         from_attributes = True
