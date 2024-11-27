@@ -5,18 +5,29 @@ from app.utils.logger import setup_logger
 
 logger = setup_logger("app")
 
-app = FastAPI(title="Restaurant Ranking API")
+app = FastAPI(title="Lieferando Ranking API")
+
+@app.on_event("startup")
+async def startup_event():
+    logger.info(f"Connected to PostgreSQL database=lieferando_db host=db-1 port=5432")
+    logger.info(f"Server listening on port=8080 host=0.0.0.0")
 
 @app.get("/rank/{restaurant_slug}")
 async def get_rank(restaurant_slug: str):
-    """Get the current ranking for a restaurant by its slug."""
+    logger.info(f"Processing ranking request for restaurant={restaurant_slug}")
     try:
         scraper = LieferandoScraper()
         result = scraper.process_slug(restaurant_slug, False)
         
         if "error" in result:
+            logger.error(f"Restaurant not found: {restaurant_slug}")
             raise HTTPException(status_code=404, detail=result["error"])
-            
+        
+        logger.info(
+            f"Ranking retrieved restaurant={restaurant_slug} rank={result['rank']} "
+            f"total={result['total_restaurants']} sponsored={result['isSponsored']}"
+        )
+        
         return {
             "restaurant_slug": restaurant_slug,
             "rank": result["rank"],

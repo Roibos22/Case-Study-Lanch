@@ -1,6 +1,5 @@
 import requests
 from urllib.parse import quote
-import json
 from datetime import datetime
 import time
 from typing import Dict, Optional
@@ -73,10 +72,10 @@ class LieferandoAPI:
         restaurant_data = self._make_request(url)
         
         if not restaurant_data.get('location'):
-            raise ValueError(f"No restaurant found for slug: {slug}")
+            raise ValueError(f"No restaurant address found for slug: {slug}")
             
         location = restaurant_data['location']
-
+        
         return {
             #'deliveryAreaId': address_data['deliveryAreaId'],
             'postalCode': location['postalCode'],
@@ -94,14 +93,3 @@ class LieferandoAPI:
         result = self._make_request(restaurants_url, address)
         
         return result
-
-    def save_response(self, data: Dict, address: str) -> str:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        safe_address = "".join(x for x in address if x.isalnum() or x in (' ', '-', '_')).strip()
-        filename = self.output_dir / f"restaurants_{safe_address}_{timestamp}.json"
-        
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        
-        self.logger.info(f"Data saved to {filename}")
-        return str(filename)

@@ -21,47 +21,34 @@ class LieferandoScraper:
         self.api = LieferandoAPI(delay_seconds=delay_seconds)
         self.logger = setup_logger("app.scraper")
 
+
+
     def process_slugs(self, slugs: List[str]) -> List[Dict]:
-        results = []
+        self.logger.info(f"Starting to process {len(slugs)} restaurants")
         for slug in slugs:
             try:
-                result = self.process_slug(slug, True)
-                self.logger.info(f"Processing {slug}")
-                if "error" not in result:
-                    results.append({
-                        "slug": slug,
-                        "rank": result["rank"],
-                        "rank_total": result["rank_total"],
-                        "total_restaurants": result["total_restaurants"]
-                    })
-                    self.logger.info(f"✓ {slug}")
-                else:
-                    self.logger.error(f"✗ {slug}: {result['error']}")
-
+                self.process_slug(slug, True)
             except Exception as e:
                 self.logger.error(f"Error processing {slug}: {e}")
                 continue
-
             time.sleep(self.api.delay_seconds)
-        
-        return results
- 
+        self.logger.info(f"Finished processing {len(slugs)} restaurants")
+
+
     def process_slug(self, slug: str, store_in_db: bool) -> dict:
-        self.logger.info(f"Processing restaurant: {slug}")
-        
         try:
             if not slug:
                 raise ValueError("Empty slug provided")
             
             address_params = self.api.get_slug_address(slug)
-            self.logger.info(f"{slug} - address found: {address_params}")
+            self.logger.info(f"{slug} - address found at postal code: {address_params.get('postalCode')}")
+            
             restaurants_data = self.api.get_restaurants_by_address(address_params)
+            
             parser = RestaurantParser(restaurants_data)
             parsed_ranking = parser.parse_restaurant(slug)
-            
             self.logger.info(f"Parsed ranking data: {parsed_ranking}")
             
-            # Store in database
             if store_in_db:
                 ranking = store_ranking(parsed_ranking)
                 self.logger.info(f"Stored ranking with ID: {ranking.id}")

@@ -1,7 +1,5 @@
-import logging
 from app.scraper.lieferando_scraper import LieferandoScraper
 from typing import List
-import time
 from apscheduler.schedulers.blocking import BlockingScheduler
 from app.utils.logger import setup_logger
 
@@ -17,14 +15,14 @@ SLUGS: List[str] = [
 def run_scraper():
     try:
         scraper = LieferandoScraper()
-        results = scraper.process_slugs(SLUGS)
-        logger.info(f"Processed {len(results)} restaurants successfully")
+        scraper.process_slugs(SLUGS)
+        logger.info(f"Processed restaurants successfully")
     except Exception as e:
         logger.error(f"Scraper Error: {e}")
 
 def main():
     scheduler = BlockingScheduler()
-    scheduler.add_job(run_scraper, 'cron', minute='*/1')
+    scheduler.add_job(run_scraper, 'cron', minute='*/10')
     scheduler.start()
 
 if __name__ == "__main__":
