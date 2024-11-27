@@ -9,7 +9,6 @@ SLUGS: List[str] = [
         "loco-chicken-i-frechen",
         "loco-chicken-bielefeld",
         "happy-slice-suedstadt",
-        "happy-slice-sueds",
         "happy-slice-pizza-i-wandsbek-markt"
 ]
 
@@ -23,7 +22,7 @@ def run_scraper():
 def main():
     logger.info("Starting scheduler...")
     scheduler = BlockingScheduler()
-    scheduler.add_job(run_scraper, 'cron', minute='*/5')
+    scheduler.add_job(run_scraper, 'cron', minute='0')
     scheduler.start()
 
 if __name__ == "__main__":
