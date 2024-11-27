@@ -22,7 +22,7 @@ def run_scraper():
 
 def main():
     scheduler = BlockingScheduler()
-    scheduler.add_job(run_scraper, 'cron', minute='*/10')
+    scheduler.add_job(run_scraper, 'cron', minute='*/1')
     scheduler.start()
 
 if __name__ == "__main__":
