@@ -22,8 +22,13 @@ def run_scraper():
 def main():
     logger.info("Starting scheduler...")
     scheduler = BlockingScheduler()
-    scheduler.add_job(run_scraper, 'cron', minute='0')
-    scheduler.start()
+    scheduler.add_job(run_scraper, 'cron', minute='0', misfire_grace_time=3600)
+
+    try:
+        scheduler.start()
+    except(KeyboardInterrupt, SystemExit):
+        logger.info("Shutting down scheduler...")
+        scheduler.shutdown()
 
 if __name__ == "__main__":
     main()
