@@ -8,4 +8,5 @@ Our restaurant partners currently do not have transparency about their ranking o
 #### Application Requirements / Success Criteria
 1. Retrieving the current ranking ad-hoc through a REST API
 2. Logging the ranking of a given list of partners in intervals of at most 60 mins
-
+3. Historical data storage and access through DB
+4. Support for multiple restaurant locations / slugs

@@ -16,7 +16,9 @@
 - No authentication needed
 - No routing needed → use http://localhost:8080 as base url
 
-#### API Response Format
+#### Minimum API Format
+- Single endpoint: GET /rank/<restaurant_slug>
+- No authentication/routing required
 ```json
 {
    "restaurant_slug": "<restaurant_slug>",
