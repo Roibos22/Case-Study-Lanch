@@ -1,6 +1,5 @@
-from app.scraper.lieferando_api import LieferandoAPI
+from app.scraper.lieferando_api import LieferandoAPI, LieferandoAPIError
 from app.parser.restaurant_parser import RestaurantParser
-import logging
 import time
 from typing import List, Dict
 from app.database.repository import RankingRepository
@@ -17,19 +16,21 @@ def store_ranking(ranking_data: dict):
         db.close()
 
 class LieferandoScraper:
-    def __init__(self, delay_seconds: float = 2.0):
-        self.api = LieferandoAPI(delay_seconds=delay_seconds)
+    def __init__(self):
+        self.api = LieferandoAPI()
         self.logger = setup_logger("app.scraper")
 
     def process_slugs(self, slugs: List[str]) -> List[Dict]:
         self.logger.info(f"Starting to process {len(slugs)} restaurants")
         for slug in slugs:
             try:
-                self.process_slug(slug, True)
+                self.process_slug(slug, store_in_db=True)
+            except LieferandoAPIError as e:
+                self.logger.error(f"Error processing '{slug}': {str(e)}")
+                continue
             except Exception as e:
                 self.logger.error(f"Error processing {slug}: {e}")
                 continue
-            time.sleep(self.api.delay_seconds)
         self.logger.info(f"Finished processing {len(slugs)} restaurants")
 
     def process_slug(self, slug: str, store_in_db: bool) -> dict:
@@ -51,10 +52,9 @@ class LieferandoScraper:
                 self.logger.info(f"Stored ranking with ID: {ranking.id}")
             
             return parsed_ranking
-            
+        except LieferandoAPIError as e:
+            self.logger.error(f"Error retrieving data for '{slug}': {str(e)}")
+            return {"slug": slug, "error": str(e)}
         except Exception as e:
             self.logger.error(f"Error processing {slug}: {str(e)}")
-            return {
-                "slug": slug,
-                "error": str(e)
-            }
+            return { "slug": slug, "error": str(e)}

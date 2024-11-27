@@ -18,4 +18,4 @@ ENV PYTHONPATH=/app
 COPY app/scraper/docker/scraper-entrypoint.sh /scraper-entrypoint.sh
 RUN chmod +x /scraper-entrypoint.sh
 
-ENTRYPOINT ["/scraper-entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/scraper-entrypoint.sh"]

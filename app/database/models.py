@@ -6,7 +6,7 @@ class Ranking(Base):
     __tablename__ = "lieferando_rankings"
 
     id = Column(Integer, primary_key=True)
-    slug = Column(String, index=True, nullable=False)
+    restaurant_slug = Column(String, index=True, nullable=False)
     rank = Column(Integer, nullable=True)
     rank_overall = Column(Integer, nullable=True)
     restaurants_delivery = Column(Integer, nullable=True)

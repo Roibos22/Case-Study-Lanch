@@ -28,7 +28,6 @@ services:
     volumes:
       - .:/app
       - /app/app/scraper/output
-    command: ["python", "scripts/run_scraper.py"]
 
   db:
     image: postgres:15-alpine

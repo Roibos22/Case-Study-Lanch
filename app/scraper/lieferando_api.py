@@ -1,33 +1,31 @@
 import requests
 from urllib.parse import quote
-from datetime import datetime
 import time
 from typing import Dict, Optional
-from pathlib import Path
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import uuid
 from app.utils.logger import setup_logger
 
+class LieferandoAPIError(Exception):
+    pass
+
 class LieferandoAPI:
-    def __init__(self, 
-                 delay_seconds: float = 1.0,
-                 max_retries: int = 3):
+    def __init__(self, max_retries: int = 3):
         self.logger = setup_logger("app.api")
-        self.delay_seconds = delay_seconds
-        self.session_id = str(uuid.uuid4())
-        self.session = requests.Session()
-        retry_strategy = Retry(
-            total=max_retries,
-            backoff_factor=0.5,
-            status_forcelist=[500, 502, 503, 504]
-        )
-        adapter = HTTPAdapter(max_retries=retry_strategy)
-        self.session.mount("https://", adapter)
+        self.session = self._create_session(max_retries)
 
     def _rotate_session_id(self):
         self.session_id = str(uuid.uuid4())
         self.logger.info("Rotated to new session ID")
+
+    def _create_session(self, max_retries):
+        session = requests.Session()
+        retry_strategy = Retry(total=max_retries, backoff_factor=0.5, status_forcelist=[500, 502, 503, 504])
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        session.mount("https://", adapter)
+        self._rotate_session_id()
+        return session
 
     def _get_headers(self) -> Dict[str, str]:
         return {
@@ -52,20 +50,15 @@ class LieferandoAPI:
 
     def _make_request(self, url: str, params: Optional[Dict] = None, retry_count: int = 0) -> Dict:
         try:
-            time.sleep(self.delay_seconds)
             response = self.session.get(url, headers=self._get_headers(), params=params)
             response.raise_for_status()
             return response.json()
         except requests.exceptions.HTTPError as e:
-            if response.status_code in [401, 403] and retry_count < 3:
-                self.logger.warning(f"Request failed with {response.status_code}, rotating session ID and retrying...")
-                self._rotate_session_id()
-                return self._make_request(url, params, retry_count + 1)
-            self.logger.error(f"API request failed: {str(e)}")
-            raise
+            self.logger.error(f"API request to '{url}' failed: {str(e)}")
+            raise LieferandoAPIError(f"API request to '{url}' failed: {str(e)}")
         except requests.exceptions.RequestException as e:
-            self.logger.error(f"API request failed: {str(e)}")
-            raise
+            self.logger.error(f"API request to '{url}' failed: {str(e)}")
+            raise LieferandoAPIError(f"API request to '{url}' failed: {str(e)}")
 
     def _validate_location_data(self, location: Dict) -> bool:
         required_fields = ['postalCode', 'lat', 'lng']
@@ -77,10 +70,14 @@ class LieferandoAPI:
 
     def get_slug_address(self, slug: str) -> Dict:
         url = f'https://cw-api.takeaway.com/api/v34/restaurant?slug={quote(slug)}'
-        location_data = self._make_request(url)
+        try:
+            location_data = self._make_request(url)
+        except LieferandoAPIError as e:
+            self.logger.error(f"Error retrieving address data for slug '{slug}': {str(e)}")
+            raise LieferandoAPIError(f"Error retrieving address data for slug '{slug}': {str(e)}")
         
         if not self._validate_location_data(location_data['location']):
-            raise ValueError(f"No restaurant location data found for slug: {slug}")
+            raise LieferandoAPIError(f"No restaurant location data found for slug: {slug}")
         
         return {
             #'deliveryAreaId': address_data['deliveryAreaId'],
@@ -94,8 +91,12 @@ class LieferandoAPI:
 
     def get_restaurants_by_address(self, addressParams: Dict) -> Dict:
         self.logger.info(f"Fetching restaurants with address params: {addressParams}")
-        restaurants_data = self._make_request("https://cw-api.takeaway.com/api/v34/restaurants", addressParams)
-        
+        try:
+            restaurants_data = self._make_request("https://cw-api.takeaway.com/api/v34/restaurants", addressParams)
+        except LieferandoAPIError as e:
+            self.logger.error(f"Error retrieving restaurant data with address params '{address_params}': {str(e)}")
+            raise LieferandoAPIError(f"Error retrieving restaurant data with address params '{address_params}': {str(e)}")
+
         if not self._validate_restaurant_data(restaurants_data):
             raise ValueError(f"No restaurant location data found for slug: {slug}")
         

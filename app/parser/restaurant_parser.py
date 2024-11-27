@@ -24,7 +24,7 @@ class RestaurantParser:
             return None
 
         return {
-            'slug': slug,
+            'restaurant_slug': slug,
             'rank': self._get_rank(restaurant_id),
             'rank_overall': self._get_rank_total(restaurant_id),
             'restaurants_delivery': len(self.restaurants_delivery),

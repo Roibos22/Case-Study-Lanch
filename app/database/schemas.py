@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Optional
 
 class RankingCreate(BaseModel):
-    slug: str
+    restaurant_slug: str
     rank: Optional[int]
     rank_overall: Optional[int]
     restaurants_delivery: Optional[int]
