@@ -1,7 +1,5 @@
 
----
 ## Analysis and Research
----
 
 #### Lieferando Web Page
 

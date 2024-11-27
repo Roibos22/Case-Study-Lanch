@@ -1,7 +1,5 @@
 
----
 ## Outlook and Future Improvements
----
 
 #### Possible Future Improvements
 - Error Hadnling and Logs

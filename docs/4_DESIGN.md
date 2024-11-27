@@ -1,7 +1,5 @@
 
----
 ## Technical Architecture Design
----
 
 **Components / Services**:
 1. **LieferandoScraper and LieferandoAPI**

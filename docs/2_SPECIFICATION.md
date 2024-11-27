@@ -1,7 +1,6 @@
 
----
 ## Technical Specification
----
+
 #### Rank Retrieval
 - Retrieve the rank as displayed to the end user on the Lieferando web app (https://www.lieferando.de/lieferservice/essen/frechen-50226)
 - Lieferando requires user to enter address → use address of restaurant to retrieve rank for
