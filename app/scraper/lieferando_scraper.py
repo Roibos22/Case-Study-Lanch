@@ -21,8 +21,6 @@ class LieferandoScraper:
         self.api = LieferandoAPI(delay_seconds=delay_seconds)
         self.logger = setup_logger("app.scraper")
 
-
-
     def process_slugs(self, slugs: List[str]) -> List[Dict]:
         self.logger.info(f"Starting to process {len(slugs)} restaurants")
         for slug in slugs:
@@ -33,7 +31,6 @@ class LieferandoScraper:
                 continue
             time.sleep(self.api.delay_seconds)
         self.logger.info(f"Finished processing {len(slugs)} restaurants")
-
 
     def process_slug(self, slug: str, store_in_db: bool) -> dict:
         try:

@@ -67,29 +67,36 @@ class LieferandoAPI:
             self.logger.error(f"API request failed: {str(e)}")
             raise
 
+    def _validate_location_data(self, location: Dict) -> bool:
+        required_fields = ['postalCode', 'lat', 'lng']
+        return all(field in location for field in required_fields)
+    
+    def _validate_restaurant_data(self, location: Dict) -> bool:
+        required_fields = ['restaurants', 'aggregates']
+        return all(field in location for field in required_fields)
+
     def get_slug_address(self, slug: str) -> Dict:
         url = f'https://cw-api.takeaway.com/api/v34/restaurant?slug={quote(slug)}'
-        restaurant_data = self._make_request(url)
+        location_data = self._make_request(url)
         
-        if not restaurant_data.get('location'):
-            raise ValueError(f"No restaurant address found for slug: {slug}")
-            
-        location = restaurant_data['location']
+        if not self._validate_location_data(location_data['location']):
+            raise ValueError(f"No restaurant location data found for slug: {slug}")
         
         return {
             #'deliveryAreaId': address_data['deliveryAreaId'],
-            'postalCode': location['postalCode'],
-            'lat': location['lat'],
-            'lng': location['lng'],
+            'postalCode': location_data['location']['postalCode'],
+            'lat': location_data['location']['lat'],
+            'lng': location_data['location']['lng'],
             'limit': 0,
             'isAccurate': 'true',
             'filterShowTestRestaurants': 'false'
         }
 
-    def get_restaurants_by_address(self, address: str) -> Dict:
-        self.logger.info(f"Fetching restaurants for address: {address}")
-    
-        restaurants_url = 'https://cw-api.takeaway.com/api/v34/restaurants'
-        result = self._make_request(restaurants_url, address)
+    def get_restaurants_by_address(self, addressParams: Dict) -> Dict:
+        self.logger.info(f"Fetching restaurants with address params: {addressParams}")
+        restaurants_data = self._make_request("https://cw-api.takeaway.com/api/v34/restaurants", addressParams)
         
-        return result
+        if not self._validate_restaurant_data(restaurants_data):
+            raise ValueError(f"No restaurant location data found for slug: {slug}")
+        
+        return restaurants_data
