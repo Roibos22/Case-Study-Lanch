@@ -70,7 +70,7 @@ This Application tracks restaurant rankings on Lieferando. Built as a technical 
 ```bash
 git clone https://github.com/Roibos22/Case-Study-Lanch
 cd Case-Study-Lanch
-docker-compose up --build
+docker-compose up
 ```
 
 ---

@@ -28,7 +28,3 @@ def init_db():
     except Exception as e:
         logger.error(f"Error creating tables: {e}")
         raise
-
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
-    init_db()
