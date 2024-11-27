@@ -16,13 +16,12 @@ def run_scraper():
     try:
         scraper = LieferandoScraper()
         scraper.process_slugs(SLUGS)
-        logger.info(f"Processed restaurants successfully")
     except Exception as e:
         logger.error(f"Scraper Error: {e}")
 
 def main():
     scheduler = BlockingScheduler()
-    scheduler.add_job(run_scraper, 'cron', minute='*/1')
+    scheduler.add_job(run_scraper, 'cron', minute='*/5')
     scheduler.start()
 
 if __name__ == "__main__":

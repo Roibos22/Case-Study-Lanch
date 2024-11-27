@@ -23,17 +23,19 @@ async def get_rank(restaurant_slug: str):
             logger.error(f"Restaurant not found: {restaurant_slug}")
             raise HTTPException(status_code=404, detail=result["error"])
         
-        logger.info(
-            f"Ranking retrieved restaurant={restaurant_slug} rank={result['rank']} "
-            f"total={result['total_restaurants']} sponsored={result['isSponsored']}"
-        )
+        logger.info(f"Ranking retrieved restaurant={restaurant_slug} rank={result['rank']} ")
         
         return {
             "restaurant_slug": restaurant_slug,
             "rank": result["rank"],
-            "total_restaurants": result["total_restaurants"],
-            "is_sponsored": result["isSponsored"],
-            "is_open": result["isOpenForOrder"]
+            "rank_overall": result["rank_overall"],
+            "restaurants_delivery": result["restaurants_delivery"],
+            "restaurants_total": result["restaurants_total"],
+            "is_sponsored": result["is_sponsored"],
+            "is_active": result["is_active"],
+            "rating_votes": result["rating_votes"],
+            "rating_score": result["rating_score"],
+            "timestamp": result["timestamp"],
         }
         
     except Exception as e:
