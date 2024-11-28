@@ -20,7 +20,12 @@
     - define schemas
     - validates and serializes data
 - sqlalchemy
-    - define databse schemas
+    - translates databse structure to code
+
+Ranking operation:
+  → Pydantic (validates input)
+    → SQLAlchemy (converts to database operations)
+      → PostgreSQL (stores data)
 
 - easy setup and integration together with fastAPI
 

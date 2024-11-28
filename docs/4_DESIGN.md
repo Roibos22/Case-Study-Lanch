@@ -7,6 +7,7 @@
 - LieferandoScraper receives list of slugs, goes through them one by one
 - calls LieferandoAPI with slug name to get address of slug
 - calls LiefarandoAPI with address to get data of restaurants at location
+- calls Parser to extract the important data
 - stores data in Database
 
 2. **Database Service** (PostgreSQL)
